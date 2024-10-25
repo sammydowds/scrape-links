@@ -1,10 +1,12 @@
 from pathlib import Path
 from bs4 import BeautifulSoup, SoupStrainer
 import csv
+from dotenv import load_dotenv
 
 import scrapy
 import os 
 
+load_dotenv()
 
 class LinkSpider(scrapy.Spider):
     name = "links"

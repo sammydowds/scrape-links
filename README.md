@@ -5,10 +5,31 @@
 
 This is a very simple tool to scrape a url and output internal and external references into two separate CSV's. 
 
-## Running
+## Install dependencies
 
 Ensure you have `poetry` installed. 
 
 ```
-poetry install && poetry run scrapy crawl links -a urls=<insert urls here>
+poetry install
+```
+
+## Scraping
+
+Pass urls in command
+
+```
+poetry run scrapy crawl links -a urls=<insert urls here>
+```
+
+You can also pass through URLs via a `.env` file. 
+
+```
+// .env
+URLS=...
+```
+
+to run
+
+```
+poetry run scrapy crawl links
 ```
